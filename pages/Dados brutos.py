@@ -47,12 +47,6 @@ with st.sidebar.expander('Tipo de pagamento'):
 with st.sidebar.expander('Quantidade de parcelas'):
     qtd_parcelas = st.slider('Selecione a quantidade de parcelas', 1, 24, (1,24))
  
-    
-query = '''
-Produto in @produtos and \
-@preco[0] <= Preço <= @preco[1] and \
-@data_compra[0] <= `Data da Compra` <= @data_compra[1]
-'''
 
 query = '''
 Produto in @produtos and \
